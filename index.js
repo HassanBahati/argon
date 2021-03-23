@@ -14,22 +14,16 @@ app.set('views', './views');
 //middleware for serving static files(csss, js , images)
 app.use(express.static('public'));
 
-//createEmployee route
-app.get('/createEmployee', (req, res) => { 
-    // res.send('Homepage! Hello World.');
-    //res.sendFile(__dirname + '/index.html')
-    res.render('createEmployee', {title: 'Employee'});
-});
+//route imports
+const dash = require('./routes/dash');
 
-//orders route
-app.get('/createOrders', (req, res) => {
-    res.render('createOrders', {title: 'create Order'})
-})
 
-//post route
-app.post('/createEmployeee', (req, res) => {
-    console.log(req.body);
-});
+//routes
+app.use('/dashboard', dash);
+
+
+
+
 
 //path parameters -used to specify the exact route
 

@@ -1,0 +1,90 @@
+doctype 
+html
+    head
+      //- // Required meta tags
+      meta(charset='utf-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1')
+      //- // CSS
+      link(href='/css/bootstrap.min.css' rel='stylesheet')
+      link(rel='stylesheet' href='/css/add.css')
+      //- // favicon
+      link(rel='icon' href='')
+      //- // font awesome css
+      link(rel='stylesheet' href='/css/font-awesome.min.css')
+      //- // document title
+      title Stay Clean
+    body
+    //- // Grid row
+    .row.bg-light
+      //- // Grid column for side bar
+      .col-lg-3
+        //- // side bar
+        .bg-white.shadow-sm(style='height: 97vh')
+          //- // heading
+          h4.text-center.pt-2 Stay Clean Initiative
+          h6.text-center &quot;Contact Us today, We manage your wastes with love&quot;
+          //- // logged in user
+          .shadow-sm.p-2.m-4.bg-light.rounded Bahati here &#x1F44B;
+          //- // side bar navigations
+          ul
+            li
+              a.text-dark(href='dash.html')
+                i.fa.fa-dashboard.m-3
+                | Dashboard
+            li
+              a.text-dark(href='orders.html')
+                i.fa.fa-phone.m-3
+                | Orders
+            li
+              a.text-dark(href='humanresource.html')
+                i.fa.fa-users.m-3
+                | Human Resource
+            li
+              a.text-dark(href='trucks.html')
+                i.fa.fa-truck.m-3
+                | Trucks
+            li
+              a.text-dark(href='finance.html')
+                i.fa.fa-money.m-3
+                | Finance
+      //- // Grid column for dashboard area
+      .col-lg-9.bg-light
+        //- // relative of dashboard
+        .shadow-none.mx-4.p-2.bg-success.rounded.text-white(style='margin: 10px 1px -30px 1px; position: relative')
+          | good morning, Bahati &#x1F44B;
+        //- // dashboard area
+        .m-2.bg-white.shadow.rounded(style='height: 92vh')
+          //- // Grid row for dashboard cards
+          .row.px-4.pt-5
+            //- // Grid column with card 1
+            .col
+              .card-body.bg-warning.rounded
+                h5.card-title Section 1
+                h6.card-subtitle.mb-2.text-muted Subtitle
+                p.card-text
+                  | Some quick example text to build on the description and make
+                  | up the bulk of the section&apos;s content.
+                a.card-link(href='#') link
+                a.card-link(href='#') Another link
+            //- // Grid column with card 2
+            .col
+              .card-body.bg-danger.rounded
+                h5.card-title Section 2
+                h6.card-subtitle.mb-2.text-muted Subtitle
+                p.card-text
+                  | Some quick example text to build on the description and make
+                  | up the bulk of the section&apos;s content.
+                a.card-link(href='#') link
+                a.card-link(href='#') Another link
+            //- // Grid column with card 3
+            .col
+              .card-body.bg-info.rounded
+                h5.card-title Section 3
+                h6.card-subtitle.mb-2.text-muted Subtitle
+                p.card-text
+                  | Some quick example text to build on the description and make
+                  | up the bulk of the section&apos;s content.
+                a.card-link(href='#') link
+                a.card-link(href='#') Another link
+    //- // bootsrap js
+    script(src='../public/js/bootstrap.min.js')

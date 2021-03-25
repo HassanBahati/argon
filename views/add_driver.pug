@@ -1,0 +1,83 @@
+//  Required meta tags 
+meta(charset="utf-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+//  CSS 
+link(href="../public/css/bootstrap.min.css", rel="stylesheet")
+link(rel="stylesheet", href="../public/css/add.css")
+// favicon
+link(rel="icon", href)
+// font awesome css
+link(rel="stylesheet", href="../public/font-awesome/css/font-awesome.min.css")
+// document title
+title Stay Clean
+// Grid row
+.row.bg-light
+  // Grid column for side bar
+  .col-lg-3
+    // side bar
+    .bg-white.shadow-sm(style="height: 97vh")
+      // heading
+      h4.text-center.pt-2 Stay Clean Initiative
+      h6.text-center.
+        
+        "Contact Us today, We manage your wastes with love"
+        
+      // logged in user
+      .shadow-sm.p-2.m-4.bg-light.rounded Bahati here
+      // side bar navigations
+      ul
+        li
+          a.text-dark(href="dash.html")
+            i.fa.fa-dashboard.m-3
+            | Dashboard
+        li
+          a.text-dark(href="orders.html")
+            i.fa.fa-phone.m-3
+            | Orders
+        li
+          a.text-dark(href="humanresource.html")
+            i.fa.fa-users.m-3
+            | Human Resource
+        li
+          a.text-dark(href="trucks.html")
+            i.fa.fa-truck.m-3
+            | Trucks
+        li
+          a.text-dark(href="finance.html")
+            i.fa.fa-money.m-3
+            | Finance
+  // Grid column for dashboard area
+  .col-lg-9.bg-light
+    // relative of dashboard
+    .shadow-none.mx-4.p-2.bg-success.rounded.text-white(style="margin: 10px 1px -30px 1px; position: relative").
+      
+      Add Driver
+      
+    // dashboard area
+    .m-2.bg-white.shadow.rounded(style="height: 70vh")
+      // heading of add employee
+      .text-center.pt-5.pb-1
+        // user icon
+        img(src="../public/images/user-icon.png", style="width: 70px; height: 70px", alt)
+        // title
+        h5 New Driver Information
+      // hr
+      hr
+      // fieldsets
+      form
+        .input-group
+          div
+            input.form-control.rounded(type="text", placeholder="Enter First Name")
+            i.fa.fa-user(aria-hidden="true")
+          .px-2
+            input.form-control.rounded(type="text", placeholder="Enter Last Name")
+          div
+            input.form-control.rounded(type="text", placeholder="Enter other Name")
+    // buttons
+    .m-4
+      // cancel button
+      a.btn.btn-secondary(href="humanresource.html") CANCEL
+      // finish button
+      a.btn.btn-success(style="display: flex; float: right", href="#") FINISH
+// bootsrap js
+script(src="../public/js/bootstrap.min.js")

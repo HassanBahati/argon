@@ -1,0 +1,42 @@
+//  Required meta tags 
+meta(charset="utf-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+//  CSS 
+link(href="../public/css/bootstrap.min.css", rel="stylesheet")
+link(rel="stylesheet", href="../public/css/register.css")
+// favicon
+link(rel="icon", href)
+// font awesome css
+link(rel="stylesheet", href="../public/font-awesome/css/font-awesome.min.css")
+link(rel="stylesheet", href="../public/css/add.css")
+title Stay Clean
+.modal-dialog.text-center
+  .col-sm-9.main-section
+    .modal-content
+      .col-12.col-md-12.col-sm-12.user-img.form-group
+        img(src="../public/images/user-icon.png")
+      .col-12.form-input
+        form(name="user", action="#", method="#")
+          .form-group
+            i.fa.fa-envelope(aria-hidden="true")
+            input.form-control(name="userEmail", type="email", placeholder="Enter Email")
+          .form-group
+            i.fa.fa-lock(aria-hidden="true")
+            input.form-control(name="userPassword", type="password", placeholder="Enter password")
+          button.btn.btn-warning(type="submit")
+            | LOGIN 
+            i.fa.fa-sign-in(aria-hidden="true")
+      .col-12.forgot
+        a(href="dash.html").
+          Forgot Password?
+          
+      .col-12.forgot
+        a(href="register.html").
+          Register
+          
+// bootstrap js
+script(src="../public/js/bootstrap.js")
+// includes js
+script(src="../public/js/includes.js")
+// form validation js
+script(src="../public/js/validate.js")

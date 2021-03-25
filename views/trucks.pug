@@ -1,0 +1,60 @@
+//  Required meta tags 
+meta(charset="utf-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+//  CSS 
+link(href="../public/css/bootstrap.css", rel="stylesheet")
+link(rel="stylesheet", href="../public/css/add.css")
+// favicon
+link(rel="icon", href)
+// font awesome css
+link(rel="stylesheet", href="../public/font-awesome/css/font-awesome.css")
+// document title
+title Stay Clean
+// Grid row
+.row.bg-light
+  // Grid column for side bar
+  .col-lg-3
+    // side bar
+    .bg-white.shadow-sm(style="height: 97vh")
+      // heading
+      h4.text-center.pt-2 Stay Clean Initiative
+      h6.text-center "Contact Us today, We manage your wastes with love"
+      // logged in user
+      .shadow-sm.p-2.m-4.bg-light.rounded Bahati here
+      // side bar navigations
+      ul
+        li
+          a.text-dark(href="dash.html")
+            i.fa.fa-dashboard.m-3
+            | Dashboard
+        li
+          a.text-dark(href="orders.html")
+            i.fa.fa-phone.m-3
+            | Orders
+        li
+          a.text-dark(href="humanresource.html")
+            i.fa.fa-users.m-3
+            | Human Resource
+        li
+          a.text-dark(href="trucks.html")
+            i.fa.fa-truck.m-3
+            | Trucks
+        li
+          a.text-dark(href="finance.html")
+            i.fa.fa-money.m-3
+            | Finance
+  // Grid column for dashboard area
+  .col-lg-9.bg-light
+    // relative of dashboard
+    .shadow-none.mx-4.p-2.bg-success.rounded.text-white(style="margin: 10px 1px -30px 1px; position: relative").
+      
+      Vehicle Summary
+      
+    // dashboard area
+    .m-2.bg-white.shadow.rounded(style="height: 92vh")
+      // add truck btn
+      a.m-5.btn.btn-secondary(href="#")
+        | ADD TRUCK +
+        i.fa.fa-truck
+// bootsrap js
+script(src="../public/js/bootstrap.js")

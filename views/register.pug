@@ -1,59 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Required meta tags -->
- <meta charset="utf-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1" />
-
- <!-- Bootstrap CSS -->
- <link href="../public/css/bootstrap.css" rel="stylesheet" />
- <link rel="stylesheet" href="../public/css/register.css"/>
- <link rel="icon" href=""/>
-  <!--font awesome css-->
-  <link rel="stylesheet" href="../public/font-awesome/css/font-awesome.css">
- 
- <title>Stay Clean</title>
-</head>
-<body class="login">
-       
-    <div class="modal-dialog text-center">
-        <div class="col-sm-9 main-section">
-            <div class="modal-content">
-                <div class="col-12 user-img">
-                    <img src="../public/images/user-icon.png" />
-                </div>
-                <div class="col-12 form-input">
-                    <form name="user" action="#" method="#">
-                        <div class="form-group">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                            <input name="userName" type="text" class="form-control" placeholder="Enter Name" /> 
-                        </div>
-                        <div class="form-group">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                            <input name="userEmail" type="email" class="form-control" placeholder="Enter Email" /> 
-                        </div>
-                        <div class="form-group">
-                            <i class="fa fa-lock" aria-hidden="true"></i>
-                            <input name="userPassword" type="password" class="form-control" placeholder="Enter password" /> 
-                        </div>
-                        <div class="form-group">
-                            <i class="fa fa-lock" aria-hidden="true"></i>
-                            <input name="confirmPassword" type="password" class="form-control" placeholder="Confirm password" /> 
-                        </div>
-                        <button type="submit" class="btn btn-warning"> SIGNUP <i class="fa fa-sign-in" aria-hidden="true"></i></button>
-                    </form>
-                </div>
-                <div class="col-12 forgot">
-                    <a href='index.html'>Login
-                </div>
-            </div>
-        </div>
-    </div>
-
-    
- <!--form validation js-->
-<script src="../public/js/validate.js"></script>   
-<!--bootstrap js-->
-<script src="../public/js/bootstrap.js"></script>
-</body>
-</html>
+/// Required meta tags 
+meta(charset="utf-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+//  CSS 
+link(href="/css/bootstrap.css", rel="stylesheet")
+link(rel="stylesheet", href="/css/add.css")
+// favicon
+link(rel="icon", href)
+// font awesome css
+link(rel="stylesheet", href="/font-awesome/css/font-awesome.css")
+// document title
+title Stay Clean
+.modal-dialog.text-center
+  .col-sm-9.main-section
+    .modal-content
+      .col-12.user-img
+        img(src="../public/images/user-icon.png")
+      .col-12.form-input
+        form(name="user", action="#", method="#")
+          .form-group
+            i.fa.fa-user(aria-hidden="true")
+            input.form-control(name="userName", type="text", placeholder="Enter Name")
+          .form-group
+            i.fa.fa-envelope(aria-hidden="true")
+            input.form-control(name="userEmail", type="email", placeholder="Enter Email")
+          .form-group
+            i.fa.fa-lock(aria-hidden="true")
+            input.form-control(name="userPassword", type="password", placeholder="Enter password")
+          .form-group
+            i.fa.fa-lock(aria-hidden="true")
+            input.form-control(name="confirmPassword", type="password", placeholder="Confirm password")
+          button.btn.btn-warning(type="submit")
+            | SIGNUP 
+            i.fa.fa-sign-in(aria-hidden="true")
+      .col-12.forgot
+        a(href="index.html").
+          Login
+          
+// form validation js
+script(src="../public/js/validate.js")
+// bootstrap js
+script(src="../public/js/bootstrap.js")

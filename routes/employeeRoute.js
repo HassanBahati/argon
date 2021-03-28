@@ -10,7 +10,7 @@ router.get('/createEmployee', (req, res) => {
     res.render('createEmployee', {title: 'Employee'});
 });
 
-//list 
+//employee list 
 router.get('/', async (req, res) => { 
     try{
         //find all data in database 
@@ -35,15 +35,8 @@ var storage = multer.diskStorage({
 
 var upload = multer({storage: storage})
 
-// router.post('/createEmployee', upload.single('imageupload'), (req,res) => {
-//     try {
-//         console.log(req.file)
-//     }
-//     catch(err) {
-//         res.send(400);
-//     }
-// })
 
+//creating new employee
 router.post('/createEmployee', upload.single('imageupload'), async (req, res) => {
     try{
         console.log(req.body);
@@ -51,7 +44,7 @@ router.post('/createEmployee', upload.single('imageupload'), async (req, res) =>
       
     employee.imageupload = req.file.path;
         //await code performing db operation 
-        await employee.save()
+        await employee.save();
         
         res.redirect('/employee')
     } catch(err){
@@ -60,7 +53,7 @@ router.post('/createEmployee', upload.single('imageupload'), async (req, res) =>
         res.send('Sorry! Something went wrong.');
     }
     
-})
+});
 
 
 //exports

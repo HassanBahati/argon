@@ -30,9 +30,9 @@ router.post('/createOrders', async (req, res) => {
       
     
         //await code performing db operation 
-        await order.save()
+        await order.save();
         
-        res.redirect('/orders')
+        res.redirect('/orders');
     } catch(err){
 
         console.log(err);

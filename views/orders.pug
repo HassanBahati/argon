@@ -15,7 +15,7 @@ title Stay Clean
   // Grid column for side bar
   .col-lg-3
     // side bar
-    .bg-white.shadow-sm(style="height: 97vh")
+    .bg-white.shadow(style="height: 97vh")
       // heading
       h4.text-center.pt-2 Stay Clean Initiative
       h6.text-center.
@@ -31,11 +31,11 @@ title Stay Clean
             i.fa.fa-dashboard.m-3
             | Dashboard
         li
-          a.text-dark(href="/dashboard/orders")
+          a.text-dark(href="/orders")
             i.fa.fa-phone.m-3
             | Orders
         li
-          a.text-dark(href="/dashboard/humanResource")
+          a.text-dark(href="/employee")
             i.fa.fa-users.m-3
             | Human Resource
         li
@@ -46,6 +46,7 @@ title Stay Clean
           a.text-dark(href="/dashboard/finance")
             i.fa.fa-money.m-3
             | Finance
+        button.btn.btn-danger.btn-block.col-lg-5.m-5 LOGOUT
   // Grid column for dashboard area
   .col-lg-9.bg-light
     // relative of dashboard
@@ -58,8 +59,32 @@ title Stay Clean
       // ADD employee
       .p-5
         // add driver btn
-        a.btn.btn-secondary(href="add_driver.html")
+        a.btn.btn-secondary(href="/orders/createOrders")
           | ADD ORDER +
           i.fa.fa-phone
-// bootsrap js
-script(src="../public/js/bootstrap.min.js")
+
+      table.table
+        thead.thead-dark.mx-5
+            tr
+                th Full Name 
+                th Location
+                th Phone Contact
+                th National Id 
+                th Time 
+                th Type of Wastes 
+                th Number of Trucks 
+                th Services Required
+                th Type of Request
+        tbody
+            if orders.length
+            each order in orders
+                tr
+                    td #{order.lastname +' '+ order.firstname}
+                    td #{order.location}
+                    td #{order.phone}
+                    td #{order.nationalId}
+                    td #{order.time}
+                    td #{order.typeOfWastes}
+                    td #{order.numberOfTrucks}
+                    td #{order.serviceRequired}
+                    td #{order.typeOfRequest}

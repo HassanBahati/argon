@@ -1,0 +1,128 @@
+// Required meta tags 
+meta(charset="utf-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+//  CSS 
+link(href="/css/bootstrap.css", rel="stylesheet")
+link(rel="stylesheet", href="/css/add.css")
+// favicon
+link(rel="icon", href)
+// font awesome css
+link(rel="stylesheet", href="/font-awesome/css/font-awesome.css")
+// document title
+title Stay Clean
+// Grid row
+.row.bg-light
+  // Grid column for side bar
+  .col-lg-3
+    // side bar
+    .bg-white.shadow(style="height: 97vh")
+      // heading
+      h4.text-center.pt-2 Stay Clean Initiative
+      h6.text-center.
+        
+        "Contact Us today, We manage your wastes with love"
+        
+      // logged in user
+      .shadow-sm.p-2.m-4.bg-light.rounded Bahati here
+      // side bar navigations
+      ul
+        li
+          a.text-dark(href="/dashboard")
+            i.fa.fa-dashboard.m-3
+            | Dashboard
+        li
+          a.text-dark(href="/orders")
+            i.fa.fa-phone.m-3
+            | Orders
+        li
+          a.text-dark(href="/employee")
+            i.fa.fa-users.m-3
+            | Human Resource
+        li
+          a.text-dark(href="/dashboard/trucks")
+            i.fa.fa-truck.m-3
+            | Trucks
+        li
+          a.text-dark(href="/dashboard/finance")
+            i.fa.fa-money.m-3
+            | Finance
+        button.btn.btn-danger.btn-block.col-lg-5.m-5 LOGOUT
+  // Grid column for dashboard area
+  .col-lg-9.bg-light
+    // relative of dashboard
+    .shadow-none.mx-4.p-2.bg-success.rounded.text-white(style="margin: 10px 1px -30px 1px; position: relative").
+      
+      Add Order
+
+    a(class='text-white moveToRight',style="padding-right: 70px; position: relative;", href='/orders') Orders List
+      
+      
+    // dashboard area
+    .m-2.bg-white.shadow.rounded(style="height: 70vh")
+      form(method="POST" action='/orders/createOrders' enctype="multipart/form-data" class='p-5')
+          div.row
+              div.col-lg-6.form-group
+                  label First name 
+                  input.form-control(name="firstname")
+              div.col-lg-6.form-group
+                  label Last name
+                  input.form-control(name="lastname")
+              div.col-lg-6.form-group
+                  label Location
+                  input.form-control(name="location")
+              div.col-lg-6.form-group
+                  label Phone Contact
+                  input.form-control(name="phone")
+              div.col-lg-6.form-group
+                  label National id number 
+                  input.form-control(name="nationalId")
+              div.col-lg-6.form-group
+                  label Time 
+                  input.form-control(name="time")
+          div.row
+              
+              div.col-lg-6.form-group
+                  label Type of waste
+                  div 
+                      label.form-check.form-check-inline
+                          input.form-check-input(type="radio" name="typeOfWastes" value="garbage")
+                          span.form-check-label Garbage
+                      label.form-check.form-check-inline
+                          input.form-check-input(type="radio" name="typeOfWastes" value="sewage")
+                          span.form-check-label Sewage
+              div.col-lg-6.form-group
+                  label Number of Trucks 
+                  select.form-control(name="numberOfTrucks")
+                      option(value='1')  1
+                      option(value='2') 2
+                      
+              div.col-lg-6.form-group
+                  label Service Requested 
+                  div
+                      label.form-check.form-check-inline 
+                          span.form-check-label garbage    &nbsp
+                          input.form-check-input(type="checkbox" checked name="serviceRequired" value="garbage")
+                      label.form-check.form-check-inline 
+                          span.form-check-label sewage   &nbsp
+                          input.form-check-input(type="checkbox" checked name="serviceRequired" value="sewage")
+              div.col-lg-6.form-group
+                  label Type of Request 
+                  div
+                      label.form-check.form-check-inline 
+                          span.form-check-label One time    &nbsp
+                          input.form-check-input(type="checkbox" checked name="typeOfRequest" value="onetime")
+                      label.form-check.form-check-inline 
+                          span.form-check-label Subscription   &nbsp
+                          input.form-check-input(type="checkbox" checked name="typeOfRequest" value="Subscription") 
+         
+                      
+              // buttons
+              div.row.mt-5.pt-5
+                // cancel button
+                div.col
+                  div.col.form-group
+                      button.btn.btn-secondary.btn-block CANCEL
+                // finish button
+                div.col
+                  div.col.form-group.moveToRight
+                      button.btn.btn-success.btn-block FINISH 

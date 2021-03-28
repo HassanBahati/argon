@@ -7,7 +7,7 @@
 }
 
 .login{
-    background: url(../images/stay-clean.jpg);
+    background: url(/images/stay-clean.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 80vh;

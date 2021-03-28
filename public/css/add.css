@@ -20,3 +20,8 @@
     margin-top: -30px;
     color: #555e60;
 }
+
+.moveToRight{
+    display: flex;
+    float: right;
+}

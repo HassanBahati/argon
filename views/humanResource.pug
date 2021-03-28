@@ -15,7 +15,7 @@ title Stay Clean
   // Grid column for side bar
   .col-lg-3
     // side bar
-    .bg-white.shadow-sm(style="height: 97vh")
+    .bg-white.shadow(style="height: 97vh")
       // heading
       h4.text-center.pt-2 Stay Clean Initiative
       h6.text-center.
@@ -31,11 +31,11 @@ title Stay Clean
             i.fa.fa-dashboard.m-3
             | Dashboard
         li
-          a.text-dark(href="/dashboard/orders")
+          a.text-dark(href="/orders")
             i.fa.fa-phone.m-3
             | Orders
         li
-          a.text-dark(href="/dashboard/humanResource")
+          a.text-dark(href="/employee")
             i.fa.fa-users.m-3
             | Human Resource
         li
@@ -46,6 +46,7 @@ title Stay Clean
           a.text-dark(href="/dashboard/finance")
             i.fa.fa-money.m-3
             | Finance
+        button.btn.btn-danger.btn-block.col-lg-5.m-5 LOGOUT
   // Grid column for dashboard area
   .col-lg-9.bg-light
     // relative of dashboard
@@ -58,12 +59,26 @@ title Stay Clean
       // ADD employee
       .p-5
         // add driver btn
-        a.btn.btn-secondary(href="add_driver.html")
-          | ADD DRIVER +
+        a.btn.btn-secondary(href='/employee/createEmployee')
+          | ADD EMPLOYEE +
           i.fa.fa-users
-        // add conductor
-        a.mx-5.btn.btn-secondary(href="add_conductor.html")
-          | ADD CONDUCTOR +
-          i.fa.fa-users
-// bootsrap js
-script(src="../public/js/bootstrap.min.js")
+
+      table.table
+        thead.thead-dark.mx-5
+            tr
+                th Profile
+                th Full Name 
+                th Gender
+                th Past incidences
+                th Role
+        tbody
+            if users.length
+            each user in users
+                tr
+                    td #{user.imageupload}
+                    td #{user.lastname +' '+ user.firstname}
+                    td #{user.gender}
+                    td #{user.pastincidences}
+                    td #{user.role}
+        
+        

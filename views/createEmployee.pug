@@ -1,0 +1,116 @@
+// Required meta tags 
+meta(charset="utf-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+//  CSS 
+link(href="/css/bootstrap.css", rel="stylesheet")
+link(rel="stylesheet", href="/css/add.css")
+// favicon
+link(rel="icon", href)
+// font awesome css
+link(rel="stylesheet", href="/font-awesome/css/font-awesome.css")
+// document title
+title Stay Clean
+// Grid row
+.row.bg-light
+  // Grid column for side bar
+  .col-lg-3
+    // side bar
+    .bg-white.shadow(style="height: 97vh")
+      // heading
+      h4.text-center.pt-2 Stay Clean Initiative
+      h6.text-center.
+        
+        "Contact Us today, We manage your wastes with love"
+        
+      // logged in user
+      .shadow-sm.p-2.m-4.bg-light.rounded Bahati here
+      // side bar navigations
+      ul
+        li
+          a.text-dark(href="/dashboard")
+            i.fa.fa-dashboard.m-3
+            | Dashboard
+        li
+          a.text-dark(href="/orders")
+            i.fa.fa-phone.m-3
+            | Orders
+        li
+          a.text-dark(href="/employee")
+            i.fa.fa-users.m-3
+            | Human Resource
+        li
+          a.text-dark(href="/dashboard/trucks")
+            i.fa.fa-truck.m-3
+            | Trucks
+        li
+          a.text-dark(href="/dashboard/finance")
+            i.fa.fa-money.m-3
+            | Finance
+        button.btn.btn-danger.btn-block.col-lg-5.m-5 LOGOUT
+  // Grid column for dashboard area
+  .col-lg-9.bg-light
+    // relative of dashboard
+    .shadow-none.mx-4.p-2.bg-success.rounded.text-white(style="margin: 10px 1px -30px 1px; position: relative").
+      
+      Add Driver or Condutor
+
+    a(class='text-white moveToRight',style="padding-right: 70px; position: relative;", href='/employee') Employee List
+      
+      
+    // dashboard area
+    .m-2.bg-white.shadow.rounded(style="height: 70vh")
+      form(method="POST" action='/employee/createEmployee' enctype="multipart/form-data" class='p-5')
+          div.form-row
+              div.col.form-group
+                  label First name 
+                  input.form-control(name="firstname")
+              div.col.form-group
+                  label Last name
+                  input.form-control(name="lastname")
+              div.col.form-group
+                  label User name
+                  input.form-control(name="username")
+          div.form-row
+              div.col.form-group
+                  label Gender
+                  div 
+                      label.form-check.form-check-inline
+                          input.form-check-input(type="radio" name="gender" value="female")
+                          span.form-check-label Female 
+                      label.form-check.form-check-inline
+                          input.form-check-input(type="radio" name="gender" value="male")
+                          span.form-check-label Male 
+              div.col.form-group
+                  label Past incidences 
+                  div
+                      label.form-check.form-check-inline 
+                          span.form-check-label accidents    &nbsp
+                          input.form-check-input(type="checkbox" checked name="pastincidences" value="accidents")
+                      label.form-check.form-check-inline 
+                          span.form-check-label fights   &nbsp
+                          input.form-check-input(type="checkbox" checked name="pastincidences" value="fights")
+                      label.form-check.form-check-inline 
+                          span.form-check-label fuel thefts &nbsp
+                      input.form-check-input(type="checkbox" checked name="pastincidences" value="fuelthefts")
+          div.form-row
+              div.col.form-group
+                  label Upload image
+                  input(type='file', name='imageupload')
+              div.col.form-group
+                  label Role 
+                  select.form-control(name="role")
+                      option(value="driver")  Driver
+                      option(value="conductor") Conductor
+         
+          
+                  
+          // buttons
+          div.row.mt-5.pt-2
+            // cancel button
+            div.col
+              div.col.form-group
+                  button.btn.btn-secondary.btn-block CANCEL
+            // finish button
+            div.col
+              div.col.form-group.moveToRight
+                  button.btn.btn-success.btn-block FINISH 

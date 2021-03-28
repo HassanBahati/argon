@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+*{box-sizing:border-box;}
+body {font-family:'Open Sans', sans-serif;height:100%;background-color:#cccccc}
+
+/*Just to center the Form*/
+form {
+ height: 50%;
+  width: 200px;
+  overflow: auto;
+  margin: auto; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0; }
+
+/* A container to position LABELS */
+.container {
+position: relative;
+top: auto;
+left: auto;
+width: auto;
+}
+
+input {
+  padding:1em;
+  border: 1px solid #ccc;
+-webkit-box-shadow: inset 0 1px 0 #eee,#fff 0 1px 0;
+box-shadow: inset 0 1px 0 #eee,#fff 0 1px 0;
+  border-radius:5px;
+  width:100%;
+}
+
+/* we put label on top of the input*/
+label {
+position: absolute;
+top: 0;
+right: 1px;
+bottom: 1px;
+left: .5em;
+z-index: 1;
+height: 1em;
+font-size: 13px;
+line-height: 3.5em;
+color: #999;
+white-space: nowrap;
+cursor: text;
+transition:all .1s ease;
+
+}
+
+input:focus ~ label, input:valid ~label {
+  font-size:9px;
+  font-weight:bold;
+  left:5px;
+  top:-5px;
+}
+input:valid ~label {
+  color:green;
+}
+input:focus:invalid ~label{
+  color:red;
+}
+
+input:required ~label::before {
+  
+  color:red;
+}
+
+input:required:valid ~label::before {
+  color:green;
+}
+
+
+    </style>
+</head>
+<body>
+    
+
+<form action="">
+    <div class="container">
+      <input type="text" id="texto" required />
+      <label for="texto">Nombre</label>
+    </div>
+    
+    <div class="container">
+      <input type="email" id="correo" required />
+      <label for="correo">Email</label>
+    </div>
+      
+      <div class="container">
+      <input type="url" id="url" required />
+      <label for="url">URL</label>
+    </div>
+    </form>
+    
+    
+</body>
+</html>

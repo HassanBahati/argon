@@ -15,7 +15,7 @@ title Stay Clean
   // Grid column for side bar
   .col-lg-3
     // side bar
-    .bg-white.shadow-sm(style="height: 97vh")
+    .bg-white.shadow(style="height: 97vh")
       // heading
       h4.text-center.pt-2 Stay Clean Initiative
       h6.text-center "Contact Us today, We manage your wastes with love"
@@ -28,11 +28,11 @@ title Stay Clean
             i.fa.fa-dashboard.m-3
             | Dashboard
         li
-          a.text-dark(href="/dashboard/orders")
+          a.text-dark(href="/orders")
             i.fa.fa-phone.m-3
             | Orders
         li
-          a.text-dark(href="/dashboard/humanResource")
+          a.text-dark(href="/employee")
             i.fa.fa-users.m-3
             | Human Resource
         li
@@ -43,6 +43,7 @@ title Stay Clean
           a.text-dark(href="/dashboard/finance")
             i.fa.fa-money.m-3
             | Finance
+        button.btn.btn-danger.btn-block.col-lg-5.m-5 LOGOUT
   // Grid column for dashboard area
   .col-lg-9.bg-light
     // relative of dashboard
@@ -55,12 +56,5 @@ title Stay Clean
       // PAY employee
       .p-5
         // add driver btn
-        a.btn.btn-secondary(href="add_driver.html") PAY DRIVER
-        // add conductor btn
-        a.mx-5.btn.btn-secondary(href="add_driver.html") PAY CONDUCTOR 
-        // pay vehicle service
-        a.btn.btn-secondary(href="add_conductor.html") TRUCK SERVICING
-        // Truck fueling
-        a.mx-5.btn.btn-secondary(href="add_conductor.html") TRUCK FUELING
-// bootsrap js
-script(src="../public/js/bootstrap.min.js")
+        a.btn.btn-secondary(href="add_driver.html") MAKE PAYMENT 
+          i.fa.fa-money 

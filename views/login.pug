@@ -1,8 +1,8 @@
-/// Required meta tags 
+// Required meta tags 
 meta(charset="utf-8")
 meta(name="viewport", content="width=device-width,initial-scale=1")
 //  CSS 
-link(href="/css/bootstrap.css", rel="stylesheet")
+link(href='/css/bootstrap.css' rel='stylesheet')
 link(rel="stylesheet", href="/css/add.css")
 link(rel="stylesheet", href="/css/register.css")
 // favicon
@@ -14,30 +14,30 @@ title Stay Clean
 .modal-dialog.text-center
   .col-sm-9.main-section
     .modal-content
-      .col-12.user-img
+      .col-12.col-md-12.col-sm-12.user-img.form-group
         img(src="/images/user-icon.png")
       .col-12.form-input
-        form(name="user", action="/users/register", method="POST")
-          .form-group
-            i.fa.fa-user(aria-hidden="true")
-            input.form-control(name="userName", type="text", placeholder="Enter Name")
+        form(name="user", action="#", method="#")
           .form-group
             i.fa.fa-envelope(aria-hidden="true")
             input.form-control(name="userEmail", type="email", placeholder="Enter Email")
           .form-group
             i.fa.fa-lock(aria-hidden="true")
             input.form-control(name="userPassword", type="password", placeholder="Enter password")
-          .form-group
-            i.fa.fa-lock(aria-hidden="true")
-            input.form-control(name="confirmPassword", type="password", placeholder="Confirm password")
           button.btn.btn-warning(type="submit")
-            | SIGNUP 
+            | LOGIN 
             i.fa.fa-sign-in(aria-hidden="true")
       .col-12.forgot
-        a(href='/users/login').
-          Login
+        a(href="").
+          Forgot Password?
           
-// form validation js
-script(src="../public/js/validate.js")
+      .col-12.forgot
+        a(href="/users/register").
+          Register
+          
 // bootstrap js
 script(src="../public/js/bootstrap.js")
+// includes js
+script(src="../public/js/includes.js")
+// form validation js
+script(src="../public/js/validate.js")

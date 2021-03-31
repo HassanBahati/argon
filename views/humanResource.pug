@@ -52,8 +52,8 @@ title Stay Clean
     // relative of dashboard
     .shadow-none.mx-4.p-2.bg-success.rounded.text-white(style="margin: 10px 1px -30px 1px; position: relative").
       
-      Employee Summary
-      
+      Employee List
+
     // dashboard area
     .m-2.bg-white.shadow.rounded(style="height: 92vh")
       // ADD employee
@@ -75,10 +75,17 @@ title Stay Clean
             if users.length
             each user in users
                 tr
-                    td #{user.imageupload}
+                    td
+                        img(src='/'+user.imageupload width="40px" height="40px")
                     td #{user.lastname +' '+ user.firstname}
                     td #{user.gender}
                     td #{user.pastincidences}
                     td #{user.role}
+                    td
+                        a(href='/employee/update/'+user._id) Update 
+                    td
+                        form(method="post" action='/employee/delete')
+                            input(type="hidden", placeholder="", name="id", value=user._id)
+                            button.btn.btn-dark.btn-block(type="submit") Delete
         
         

@@ -1,80 +1,74 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
+
+*{box-sizing:border-box;}
+body {font-family:'Open Sans', sans-serif;height:100%;background-color:#cccccc}
+
+/*Just to center the Form*/
+form {
+ height: 100%;
+  width: 450px;
+  overflow: auto;
+  margin: auto; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0; }
+
+/* A container to position LABELS */
+.labelPosition {
+position: relative;
+top: auto;
+left: auto;
+width: auto;
 }
 
-.login{
-    background: url(/images/stay-clean.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 80vh;
-}
-.login-container{
-    width: 500px;
-}
-
-.main-section{
-    margin: auto;
-    margin-top: 130px;
-    padding:0;
+input {
+  padding:1em;
+  margin-bottom:1em;
+  border: 1px solid #ccc;
+-webkit-box-shadow: inset 0 1px 0 #eee,#fff 0 1px 0;
+box-shadow: inset 0 1px 0 #eee,#fff 0 1px 0;
+  border-radius:5px;
+  width:100%;
 }
 
-.modal-content{
-    background-color:  #434e5a;
-    opacity: .8;
-    padding: 0 18px;
-    border-radius: 10px;
+/* we put label on top of the input*/
+label {
+position: absolute;
+top: 0;
+right: 1px;
+bottom: 1px;
+left: .5em;
+z-index: 1;
+height: 1em;
+font-size: 13px;
+line-height: 3.5em;
+color: #999;
+white-space: nowrap;
+cursor: text;
+transition:all .1s ease;
+
 }
 
-.user-img img{
-    margin-top: -60px;
-    margin-bottom: 60px; 
-    height: 100px;
+input:focus ~ label, input:valid ~label {
+  font-size:9px;
+  font-weight:bold;
+  left:5px;
+  top:-5px;
+}
+input:valid ~label {
+  color:green;
+}
+input:focus:invalid ~label{
+  color:red;
 }
 
-.form-group{
-    margin-bottom: 25px;
-}
-.fa-envelope, .fa-lock, .fa-user{
-    position: absolute;
-    left: 28px;
-    padding-top: 12px;
-    color: #555e60;
-    font-family: 22px;
-}
-.form-group input {
-    height: 42px;
-    border-radius: 5px;
-    border: 0;
-    font-size: 18px;
-     letter-spacing: 2px;
-     padding-left: 54px;
+input:required ~label::before {
+  
+  color:red;
 }
 
-.form-input button{
-width: 40%;
-margin: 5px 0 25px;
+input:required:valid ~label::before {
+  color:green;
 }
 
-.btn-warning{
-    background-color: #f3e307;
-    font-size: 19px;
-    border-radius: 5px;
-    padding: 7px 14px;
-    border: 1px solid white;
-}
-
- .btn-warning:hover{
-     background-color: #faf288;
-     border: 1px solid #0f0f0f;
- }
- .forgot{
-     padding: 5px 0 25px;
- }
-
- .forgot a{
-     color: #daf1ff;
- }

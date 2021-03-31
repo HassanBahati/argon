@@ -1,43 +1,23 @@
-// Required meta tags 
+/// Required meta tags 
 meta(charset="utf-8")
 meta(name="viewport", content="width=device-width,initial-scale=1")
 //  CSS 
-link(href='/css/bootstrap.css' rel='stylesheet')
-link(rel="stylesheet", href="/css/add.css")
+link(href="/css/bootstrap.css", rel="stylesheet")
 link(rel="stylesheet", href="/css/register.css")
 // favicon
 link(rel="icon", href)
 // font awesome css
 link(rel="stylesheet", href="/font-awesome/css/font-awesome.css")
 // document title
-title Stay Clean
-.modal-dialog.text-center
-  .col-sm-9.main-section
-    .modal-content
-      .col-12.col-md-12.col-sm-12.user-img.form-group
-        //- img(src="/images/user-icon.png")
-      .col-12.form-input
-        form(name="user", action="#", method="#")
-          .form-group
-            i.fa.fa-envelope(aria-hidden="true")
-            input.form-control(name="userEmail", type="email", placeholder="Enter Email")
-          .form-group
-            i.fa.fa-lock(aria-hidden="true")
-            input.form-control(name="userPassword", type="password", placeholder="Enter password")
-          button.btn.btn-warning(type="submit")
-            | LOGIN 
-            i.fa.fa-sign-in(aria-hidden="true")
-      .col-12.forgot
-        a(href="").
-          Forgot Password?
-          
-      .col-12.forgot
-        a(href="/users/register").
-          Register
-          
-// bootstrap js
-script(src="../public/js/bootstrap.js")
-// includes js
-script(src="../public/js/includes.js")
-// form validation js
-script(src="../public/js/validate.js")
+title Login || Stay Clean
+form(action='/login' method="POST")
+  h2 Welcome To StayClean
+  h3 Login
+  .labelPosition
+    input#texto(type="text", name="username" required)
+    label(name="username") Username
+  .labelPosition
+    input#texto(type="password", name='password' required)
+    label(name="password") Password
+  .hassan
+    input(type="submit", value="Submit")

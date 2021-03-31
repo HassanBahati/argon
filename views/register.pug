@@ -3,41 +3,25 @@ meta(charset="utf-8")
 meta(name="viewport", content="width=device-width,initial-scale=1")
 //  CSS 
 link(href="/css/bootstrap.css", rel="stylesheet")
-link(rel="stylesheet", href="/css/add.css")
 link(rel="stylesheet", href="/css/register.css")
 // favicon
 link(rel="icon", href)
 // font awesome css
 link(rel="stylesheet", href="/font-awesome/css/font-awesome.css")
 // document title
-title Stay Clean
-.modal-dialog.text-center
-  .col-sm-9.main-section
-    .modal-content
-      .col-12.user-img
-        //- img(src="/images/user-icon.png")
-      .col-12.form-input
-        form(name="user", action="/users/register", method="POST")
-          .form-group
-            i.fa.fa-user(aria-hidden="true")
-            input.form-control(name="userName", type="text", placeholder="Enter Name")
-          .form-group
-            i.fa.fa-envelope(aria-hidden="true")
-            input.form-control(name="userEmail", type="email", placeholder="Enter Email")
-          .form-group
-            i.fa.fa-lock(aria-hidden="true")
-            input.form-control(name="userPassword", type="password", placeholder="Enter password")
-          .form-group
-            i.fa.fa-lock(aria-hidden="true")
-            input.form-control(name="confirmPassword", type="password", placeholder="Confirm password")
-          button.btn.btn-warning(type="submit")
-            | SIGNUP 
-            i.fa.fa-sign-in(aria-hidden="true")
-      .col-12.forgot
-        a(href='/users/login').
-          Login
-          
-// form validation js
-script(src="../public/js/validate.js")
-// bootstrap js
-script(src="../public/js/bootstrap.js")
+title Register || Stay Clean
+form(action='/register' method="POST")
+  h2 Welcome To StayClean
+  h3 Register
+  .labelPosition
+    input#texto(type="text", name="username", required)
+    label() Username
+  .labelPosition
+    input#texto(type="text", name="email", required)
+    label() Email
+  .labelPosition
+    input#texto(type="password",name='password', required)
+    label(for="texto") Password
+  
+  .hassan
+    input(type="submit", value="Submit")

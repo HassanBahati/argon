@@ -27,7 +27,6 @@ router.post('/createOrders', async (req, res) => {
     try{
         console.log(req.body);
         const order = new Orders(req.body);
-      
     
         //await code performing db operation 
         await order.save();

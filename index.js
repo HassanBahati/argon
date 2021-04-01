@@ -82,6 +82,19 @@ app.get('*', (req, res) => {
   res.send('the route specified doesnt exist');
 });
 
+//logout route 
+app.post('/logout', (req, res) => {
+  if (req.session) {
+      req.session.destroy((err)=> {
+          if (err) {
+              console.log(err)
+          } else {
+              return res.redirect('/login');
+          }
+      })
+  }
+});
+
 //server to run at port 3000
 app.listen(3000, () => console.log('Server started on port 3000'));
 

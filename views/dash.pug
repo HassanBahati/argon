@@ -47,7 +47,8 @@ html
               a.text-dark(href='/dashboard/finance')
                 i.fa.fa-money.m-3
                 | Finance
-            button.btn.btn-danger.btn-block.col-lg-5.m-5 LOGOUT
+            form(method="post" action='/logout') 
+              button.btn.btn-danger.btn-block.col-lg-5.m-5(type='submit') LOGOUT
       //- // Grid column for dashboard area
       .col-lg-9.bg-light
         //- // relative of dashboard

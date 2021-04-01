@@ -55,7 +55,7 @@ app.use(cors());
 app.use(passport.initialize());
 app.use(passport.session());
 
-
+//passport congifgurations
 passport.use(Registration.createStrategy());
 passport.serializeUser(Registration.serializeUser());
 passport.deserializeUser(Registration.deserializeUser());

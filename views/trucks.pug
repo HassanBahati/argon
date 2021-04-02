@@ -58,5 +58,12 @@ title Stay Clean
       a.m-5.btn.btn-secondary(href="#")
         | ADD TRUCK +
         i.fa.fa-truck
+
+      form.pull-right.search(action='/employee')
+                div.row.mx-4
+                    div.col-lg-10
+                        input.form-control(name='role' placeholder="Enter your search term(role) ...")
+                    div.col-lg-2
+                        input.btn.btn-secondary.btn-block(type="submit", value='Search')
 // bootsrap js
 script(src="../public/js/bootstrap.js")

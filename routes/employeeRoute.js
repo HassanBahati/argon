@@ -12,8 +12,7 @@ router.get('/createEmployee', (req, res) => {
 
 //employee list
 router.get('/', async (req, res) => {
-    //protected route needs login
-  if (req.session.user) {
+  //protected route needs login
     try {
       //find all data in database
       const employeeDetails = await Employee.find();
@@ -24,9 +23,6 @@ router.get('/', async (req, res) => {
     } catch (err) {
       res.send('Failed to retireve Employee Details ');
     }
-  } else {
-    res.redirect('/login');
-  }
 });
 
 //image upload
@@ -90,6 +86,23 @@ router.post('/delete', async (req, res) => {
     res.redirect('back');
   } catch (err) {
     res.status(400).send('Unable to delete item in the database');
+  }
+});
+
+//search employee
+router.get('/employeeSearch', async (req, res) => {
+  try {
+    //find all the data in the employee collection
+    let employeeDetails = await Employee.find();
+    if (req.query.role) {
+      employeeDetails = await Employee.find({ role: req.query.role });
+    }
+    res.render('humanResource', {
+      users: employeeDetails,
+      title: 'Employee List',
+    });
+  } catch (err) {
+    res.status(400).send('Failed to retrieve Employee Details');
   }
 });
 

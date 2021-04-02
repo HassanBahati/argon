@@ -1,9 +1,9 @@
 //constants and regex
 const user = document.user;
 var email = document.user.userEmail;
-var userName = document.user.userName;
+var userName = document.user.username;
 var confirmedPassword = document.user.confirmPassword;
-var password = document.user.userPassword;
+var password = document.user.password;
 const lettersRegex = /^[A-Za-z]+$/;
 const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 

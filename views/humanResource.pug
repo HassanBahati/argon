@@ -21,7 +21,7 @@ title Stay Clean
       h6.text-center.
         
         "Contact Us today, We manage your wastes with love"
-        
+      
       // logged in user
       .shadow-sm.p-2.m-4.bg-light.rounded Bahati here
       // side bar navigations
@@ -53,8 +53,14 @@ title Stay Clean
     // relative of dashboard
     .shadow-none.mx-4.p-2.bg-success.rounded.text-white(style="margin: 10px 1px -30px 1px; position: relative").
       
-      Employee List
+        Employee List
 
+    //- form.pull-right.search(action='/employee')(style="margin: -8px 1px -30px 1px;")
+    //-             div.row
+    //-                 div.col-lg-8
+    //-                     input.form-control(name='role' placeholder="Enter your search term(role) ...")
+    //-                 div.col-lg-4
+    //-                     input.btn.btn-dark.btn-block(type="submit", value='Search')
     // dashboard area
     .m-2.bg-white.shadow.rounded(style="height: 92vh")
       // ADD employee
@@ -64,6 +70,12 @@ title Stay Clean
           | ADD EMPLOYEE +
           i.fa.fa-users
 
+        form.pull-right.search(action='/employee/employeeSearch')
+                div.row.mx-4
+                    div.col-lg-10
+                        input.form-control(name='role' placeholder="Enter your search term(role) ...")
+                    div.col-lg-2
+                        input.btn.btn-secondary.btn-block(type="submit", value='Search')
       table.table
         thead.thead-dark.mx-5
             tr

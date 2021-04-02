@@ -53,9 +53,9 @@ title Stay Clean
     // relative of dashboard
     .shadow-none.mx-4.p-2.bg-success.rounded.text-white(style="margin: 10px 1px -30px 1px; position: relative").
       
-      Update Employee 
+      Update Order 
 
-    a(class='text-white moveToRight',style="padding-right: 70px; position: relative;", href='/employee') Employee List
+    a(class='text-white moveToRight',style="padding-right: 70px; position: relative;", href='/orders') Orders List
 
         // dashboard area
     .m-2.bg-white.shadow.rounded(style="height: 92vh")
@@ -64,10 +64,10 @@ title Stay Clean
                 div.col.form-group.col-md-12   
                     div.form-row
                         div.col-md-10
-                            p Here is your information #{user.firstname}
+                            p Here is your order #{order.firstname}
             div.form-row
                 img(src='/'+user.imageupload width="150px" height="170px")
-            form(method="post" action="/employee/update?id="+user._id)
+            form(method="post" action="/orders/update?id="+user._id)
                 table.table
                     thead.thead-dark
                         tr

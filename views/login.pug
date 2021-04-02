@@ -10,7 +10,7 @@ link(rel="icon", href)
 link(rel="stylesheet", href="/font-awesome/css/font-awesome.css")
 // document title
 title Login || Stay Clean
-form(action='/login' method="POST")
+form(action='/login' method="POST" name='user')
   h2 Welcome To StayClean
   h3 Login
   .labelPosition
@@ -21,3 +21,4 @@ form(action='/login' method="POST")
     label(name="password") Password
   .hassan
     input(type="submit", value="Submit")
+script(src="/js/validate.js")

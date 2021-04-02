@@ -16,7 +16,7 @@ const ordersSchema = new mongoose.Schema({
     
     },
     phone: {
-        type: Number,
+        type: String,
      
     },
     nationalId: {

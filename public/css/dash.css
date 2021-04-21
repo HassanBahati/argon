@@ -1,0 +1,10 @@
+.dash-height{
+    height: 92vh;
+  }
+  .dash-card{
+    box-shadow: 30px;
+  }
+  #dash-number{
+    display: flex;
+    float: right;
+  }

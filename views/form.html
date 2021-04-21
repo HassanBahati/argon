@@ -1,34 +1,110 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-</head>
-<body>
-    
-
-<form action="">
-  <h2>Welcome To StayClean</h2>
-  <h3>Login</h3>
-    <div class="container">
-      <input type="text" id="texto" required />
-      <label for="texto">Username</label>
-    </div>
-
-    <div class="container">
-      <input type="password" id="texto" required />
-      <label for="texto">Password</label>
-    </div>
-    
-    <div class="container">
-      <input type="submit" value="Submit" />
-    </div>
-   
-    </form>
-    
-    
-</body>
-</html>
+meta(charset="UTF-8")
+meta(http-equiv="X-UA-Compatible", content="IE=edge")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+title Document
+// Grid row
+.row.bg-light
+  // Grid column for side bar
+  .col-lg-3
+    // side bar
+    sidebar.
+      
+      
+  // Grid column for dashboard area
+  .col-lg-9.bg-light
+    // relative of dashboard
+    .shadow-none.mx-4.p-2.top-background.rounded.text-white(style="margin: 10px 1px -30px 1px; position: relative").
+      
+      good morning, Bahati 👋
+      
+    // dashboard area
+    .m-2.bg-white.shadow.rounded.dash-height
+      //  add ons  
+      .p-5
+        //  add order  
+        router-link.btn.btn-secondary(to="/addOrder")
+          | ADD ORDER +
+          i.fa.fa-phone
+        //  add employee  
+        router-link.btn.btn-secondary.ml-3(to="/addEmployee")
+          | ADD EMPLOYEE +
+          i.fa.fa-users
+        //  make payment  
+        router-link.btn.btn-secondary.ml-3(to="/addpayment")
+          | ADD PAYMENT +
+          i.fa.fa-money
+        //  make payment  
+        router-link.btn.btn-secondary.ml-3(to="/addTruck")
+          | ADD TRUCK +
+          i.fa.fa-truck
+      // Grid row for dashboard cards
+      .row.px-4
+        // Grid column with orders card 
+        .col
+          .card-body.shadow-lg.rounded
+            h5.card-title
+              i.fa.fa-phone.m-3
+              p#dash-number 50
+            h6.card-subtitle.mb-2.text-muted Orders
+        // Grid column with Garbage PickUps card 
+        .col
+          .card-body.shadow-lg.rounded
+            h5.card-title
+              i.fa.fa-phone.m-3
+              p#dash-number 50
+            h6.card-subtitle.mb-2.text-muted Garbage PickUps
+        // Grid column with Sewage PickUps card 
+        .col
+          .card-body.shadow-lg.rounded
+            h5.card-title
+              i.fa.fa-phone.m-3
+              p#dash-number 50
+            h6.card-subtitle.mb-2.text-muted Sewage PickUps
+      //  2nd row  
+      // Grid row for dashboard cards
+      .row.px-4.pt-4
+        // Grid column with total empployees
+        .col
+          .card-body.shadow-lg.rounded
+            h5.card-title
+              i.fa.fa-users.m-3
+              p#dash-number 50
+            h6.card-subtitle.mb-2.text-muted Employees
+        // Grid column with drivers
+        .col
+          .card-body.shadow-lg.rounded
+            h5.card-title
+              i.fa.fa-users.m-3
+              p#dash-number 50
+            h6.card-subtitle.mb-2.text-muted Drivers
+        // Grid column with Conductors
+        .col
+          .card-body.shadow-lg.rounded
+            h5.card-title
+              i.fa.fa-users.m-3
+              p#dash-number 50
+            h6.card-subtitle.mb-2.text-muted Conductors
+      //  3rd row  
+      // Grid row for dashboard cards
+      .row.px-4.pt-4
+        // Grid column Gross Income card 1
+        .col
+          .card-body.shadow-lg.rounded
+            h5.card-title
+              i.fa.fa-money.m-3
+              p#dash-number 50
+            h6.card-subtitle.mb-2.text-muted Gross Income
+        // Grid column with Expenditures-paymnts-salaries card 2
+        .col
+          .card-body.shadow-lg.rounded
+            h5.card-title
+              i.fa.fa-money.m-3
+              p#dash-number 50
+            h6.card-subtitle.mb-2.text-muted Expenditures
+        // Grid column with Profits card 3
+        .col
+          .card-body.shadow-lg.rounded
+            h5.card-title
+              i.fa.fa-money.m-3
+              p#dash-number 50
+            h6.card-subtitle.mb-2.text-muted Profits

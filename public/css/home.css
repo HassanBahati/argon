@@ -1,0 +1,48 @@
+#logo {
+    color: black;
+    font-weight: bolder;
+  }
+  a{
+    list-style: none;
+    
+  }
+  #free-trial {
+    background-color: #008060;
+    color: white;
+    border-radius: 4px;
+  }
+  nav {
+    background: #fff;
+    border-bottom: 1px solid rgb(173, 173, 173);
+  }
+  .footer {
+    background: #013d2e;
+    padding: 10px;
+  }
+  h4,
+  p {
+    color: white;
+    display: flex;
+    justify-content: center;
+  }img {
+    display: flex;
+    float: right;
+    height: 520px;
+    width: 700px;
+  
+    margin-top: 40px;
+  }
+  h2 {
+    margin-top: 170px;
+    color: #013d2e;
+  }
+  #order-btn {
+    background-color: #03bb8d;
+    color: #fff;
+  }
+  .input-section {
+    margin: 50px;
+  }
+  #try {
+    margin: 30px;
+  }

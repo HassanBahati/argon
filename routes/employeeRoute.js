@@ -25,6 +25,18 @@ router.get('/', async (req, res) => {
     }
 });
 
+//vue employes
+router.get('/vueEmployeeList', async (req, res) => {
+  //protected route needs login
+    try {
+      //find all data in database
+      const employeeDetails = await Employee.find();
+     res.json(employeeDetails)
+    } catch (err) {
+      res.send('Failed to retireve Employee Details ');
+    }
+});
+
 //image upload
 var storage = multer.diskStorage({
   destination: (req, file, cb) => {

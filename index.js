@@ -75,7 +75,12 @@ app.use('/login', login);
 app.use('/employee', employee);
 app.use('/orders', orders);
 
-//path parameters -used to specify the exact route
+
+//home
+app.get('/', (req, res) => {
+  res.render('home');
+});
+
 
 //incase a route doesnt exist
 app.get('*', (req, res) => {

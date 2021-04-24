@@ -16,6 +16,17 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/vueorders', async (req, res) => { 
+    try{
+        //find all data in database 
+        const ordersDetails = await Orders.find();
+        res.json(ordersDetails)
+       
+    }catch(err){
+        res.send('Failed to retireve Orders Details ')
+    }
+});
+
 
 ///get createorder
 router.get('/createOrders', (req, res) => { 
